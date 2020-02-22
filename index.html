@@ -51,11 +51,6 @@
                 <button id="button" type="button" class="btn btn-dark" onclick="genFortune()">กดเพื่อสุ่ม</button>
             </div>
         </div>
-        <div class="row m-3">
-            <div class="col-12 text-center">
-                <p>หรือเขย่าเพื่อสุ่ม</p>
-            </div>
-        </div>
     </div>
     <script type="text/javascript">
         let slist = {
@@ -96,18 +91,6 @@
             "no35": "คำทำนายที่สามสิบห้า เซียมซีใบนี้ว่าด้วย ชะตาชีวิตช่วงนี้ จะได้ลาภและเนื้อคู่ การงานไม่มีอุปสรรค เจ็บป่วยจะมีหมอดีมารักษา มิฉะนั้นจะมีผู้ใหญ่คุ้มครอง จงหมั่นไหว้พระขอพรจะดีนักแล",
             "no36": "คำทำนายที่สามสิบหก เซียมซีใบนี้ว่าด้วย ชะตาชีวิตช่วงนี้ เข้าสู่โชคลาภจะมีผู้สูงอายุมาให้โชค มิฉะนั้นจะมีเนื้อคู่พร้อมด้วยทรัพย์สมบัติ การค้าขายไม่มีอุปสรรค เจ็บป่วยจะมีหมอดีมารักษา สรรพสิ่งดังใจหมาย ถ้าเป็นความจะชนะแล"
         }
-
-        let accelerometer = new Accelerometer({
-            frequency: 60
-        });
-
-        accelerometer.addEventListener('reading', e => {
-            console.log("Acceleration along the X-axis " + accelerometer.x);
-            console.log("Acceleration along the Y-axis " + accelerometer.y);
-            console.log("Acceleration along the Z-axis " + accelerometer.z);
-            alert(accelerometer.x+accelerometer.y+accelerometer.z);
-        });
-        accelerometer.start();
 
         function genFortune() {
             let display = document.getElementById("display");
