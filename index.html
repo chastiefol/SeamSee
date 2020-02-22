@@ -4,6 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>เซียมซี | SeamSee</title>
+
+    <!-- icon -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="img/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="img/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png" /> 
+    <link rel="apple-touch-icon" sizes="120x120" href="img/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="img/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="img/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon-180x180.png" />
+
+    <!-- splash screen -->
+    <link href="img/splashscreens/iphone5_splash.png" 
+        media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="img/splashscreens/iphone6_splash.png" 
+        media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="img/splashscreens/iphoneplus_splash.png" 
+        media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="img/splashscreens/iphonex_splash.png" 
+        media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="img/splashscreens/iphonexr_splash.png" 
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="img/splashscreens/iphonexsmax_splash.png" 
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="img/splashscreens/ipad_splash.png" 
+        media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="img/splashscreens/ipadpro1_splash.png" 
+        media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="img/splashscreens/ipadpro3_splash.png" 
+        media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="img/splashscreens/ipadpro2_splash.png" 
+        media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
@@ -11,6 +46,8 @@
         body {
             margin: 0;
             font-family: 'Kanit' !important;
+            /* background: #921617; */
+            background-color: #B6151B;
         }
 
         .h-15 {
@@ -20,14 +57,22 @@
         h4 {
             margin: 0;
         }
+        
+        p, h5{
+            color: white;
+        }
+
+        #box {
+            background-color: #C02923;
+        }
     </style>
 </head>
 
 <body>
     <!-- navbar -->
-    <nav class="navbar navbar-light">
+    <nav class="navbar navbar-dark bg-warning">
         <a class="navbar-brand" href="#">
-            เสี่ยงเซียมซี
+            เสี่ยงเซียมซี 🙏🏻
         </a>
     </nav>
 
@@ -38,17 +83,17 @@
                 <h5 class="d-inline"><b>เสี่ยงเซียมซีออนไลน์</b></h5><br>
                 <p class="mt-3">เซียมซีเสี่ยงดวงชะตาประจำวันมาแล้ว</p>
                 <p>หากเจ้าต้องการรู้ดวงชะตาวันนี้</p>
-                <p>ตั้งจิตอธิษฐานให้มั่น</p>
+                <p>ตั้งจิตอธิษฐานให้มั่น แล้วกดปุ่มเพื่อทำนายดวง</p>
             </div>
         </div>
-        <div class="row m-2 d-flex">
-            <div class="col-12 text-center p-2 border border-dark rounded text-wrap">
+        <div class="row m-2 d-flex" id="box">
+            <div class="col-12 text-center p-2 border border-warning rounded text-wrap">
                 <p class="my-2" id="display"></p>
             </div>
         </div>
         <div class="row mt-2">
             <div class="col-12 text-center">
-                <button id="button" type="button" class="btn btn-dark" onclick="genFortune()">กดเพื่อสุ่ม</button>
+                <button id="button" type="button" class="btn btn-warning" onclick="genFortune()">กดเพื่อสุ่ม</button>
             </div>
         </div>
     </div>
